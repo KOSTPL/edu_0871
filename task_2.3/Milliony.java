@@ -10,10 +10,14 @@
 •	Выведенное число должно соответствовать заданию.
 */
 
-public class Milliony {
+public class task_2_3 {
     public static void main(String[] args) {
         //напишите тут ваш код
-       int a=1, b=2, c=3, d=4, e=5,f=6, j=7, k=8, h=9, s=10;
-        System.out.println(a*b*c*d*e*f*j*k*h*s);
+        int[] nums = {1,2,3,4,5,6,7,8,9,10};
+        int mult = 1;
+        for (int i=0; i<=9; i++){
+            mult*=nums[i];
+        }
+        System.out.println(mult);
     }
 }
