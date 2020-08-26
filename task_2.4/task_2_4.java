@@ -1,3 +1,4 @@
+// РЕШЕНИЕ БЕЗ ИСПОЛЬЗОВАНИЯ МАССИВА
 /*
 Вывести на экран сумму чисел от 1 до 5 построчно (должно быть 5 строк):
 1
@@ -17,10 +18,10 @@
 public class task_2_4 {
     public static void main(String[] args) {
         //напишите тут ваш код
-        int[] nums = {1,2,3,4,5};
+        
         int sum = 0;
-        for (int i=0; i<5; i++){
-            sum+=nums[i];
+        for (int i=1; i<=+5; i++){
+            sum=sum+i;
             System.out.println(sum);
         }
     }
