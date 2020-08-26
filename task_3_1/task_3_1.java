@@ -21,17 +21,18 @@ public class task_3_1 {
         System.out.println("Меня зовут " + gosha.getName());
         System.out.println("Имя моей мамы: " + gosha.mother.getName());
         System.out.println("Имя моего папы: " + gosha.father.getName());
-        System.out.println("У меня две бабушки, бабушка "+ gosha.mother.mother.getName()+" и "+gosha.father.mother.getName());
+        System.out.println("У меня две бабушки, бабушка " + gosha.mother.mother.getName() + " и " + gosha.father.mother.getName());
         System.out.println("У меня два деда, деда " + gosha.father.father.getName() + " и " + gosha.mother.father.getName());
     }
+}
 
-    static class Person {
-        private String name;
-        private String lastname;
-        private int age;
-        private int hp = 100;
-        private Person mother;
-        private Person father;
+    class Person {
+        protected String name;
+        protected String lastname;
+        protected int age;
+        protected int hp = 100;
+        protected Person mother;
+        protected Person father;
 
         public Person(String name, String lastname, int age, Person mother, Person father) {
             this.name = name;
@@ -49,4 +50,3 @@ public class task_3_1 {
             return this.hp;
         }
     }
-}
