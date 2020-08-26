@@ -1,4 +1,3 @@
-public class task_3_3 {
     /*
 Создать class Dog. У собаки должна быть кличка String name и возраст int age.
 Создайте геттеры и сеттеры для всех переменных класса Dog.
@@ -11,7 +10,7 @@ public class task_3_3 {
 •	У класса должен быть сеттер для переменной age.
 •	У класса должен быть геттер для переменной age.
 */
-    public class Dog {
+    class Dog {
         //напишите тут ваш код
         // Программа не скомпилировалась, т.е. проверку не понял как провести, перед тем как выкладывать... 
         private String name;
@@ -36,9 +35,7 @@ public class task_3_3 {
         public void setAge(int age) {
             this.age = age;
         }
-
+ }
         public void main(String[] args) {
-           Dog dog = new Dog("Tuzik",3);
-           // System.out.println(dog);
         }
-    }
+   
