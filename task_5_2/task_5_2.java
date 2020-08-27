@@ -28,15 +28,18 @@ import java.util.Scanner;
 public class task_5_2 {
     public static void main(String[] args) throws IOException {
 
-        // напишите тут ваш код D:\file\1.txt 
+        // напишите тут ваш код D:\file\1.txt
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите ссылку на файл (пример D:/file/1.txt)");
         Scanner scanner = null;
         try {
             scanner = new Scanner(new FileInputStream(reader.readLine()));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
             FileInputStream fin = new FileInputStream("D:/file/1.txt");
+            System.out.println("Список чисел из файла :");
             int i = -1;
             while ((i = fin.read())!= -1){
                 System.out.print((char)i);
@@ -45,6 +48,7 @@ public class task_5_2 {
             System.out.println("");
 
         ArrayList<Integer> arrayList = new ArrayList<>();
+        System.out.println("Список четных чисел по возрастанию из файла :");
         while (scanner.hasNextInt()) {
             int x = scanner.nextInt();
             if (x % 2 == 0) {
