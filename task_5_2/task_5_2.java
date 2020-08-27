@@ -28,7 +28,7 @@ import java.util.Scanner;
 public class task_5_2 {
     public static void main(String[] args) throws IOException {
 
-        // напишите тут ваш код D:\file\1.txt / scanner.close();
+        // напишите тут ваш код D:\file\1.txt 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Scanner scanner = null;
         try {
@@ -36,7 +36,6 @@ public class task_5_2 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
             FileInputStream fin = new FileInputStream("D:/file/1.txt");
             int i = -1;
             while ((i = fin.read())!= -1){
@@ -50,12 +49,8 @@ public class task_5_2 {
             int x = scanner.nextInt();
             if (x % 2 == 0) {
                 arrayList.add(x);
+                System.out.println(x);
             }
-
-            Collections.sort(arrayList);
-            for ( int y : arrayList)
-
-            System.out.println(y);
         }
     }
 }
