@@ -38,22 +38,24 @@ public class task_5_2 {
             e.printStackTrace();
         }
 
-            FileInputStream fin = new FileInputStream("D:/file/1.txt");
-            System.out.println("Список чисел из файла :");
-            int i = -1;
-            while ((i = fin.read())!= -1){
-                System.out.print((char)i);
-            }
-            fin.close();
-            System.out.println("");
+        FileInputStream fin = new FileInputStream("D:/file/1.txt");
+        System.out.println("Список чисел из файла :");
+        int i = -1;
+        while ((i = fin.read()) != -1) {
+            System.out.print((char) i);
+        }
+        fin.close();
+        System.out.println("");
 
         ArrayList<Integer> arrayList = new ArrayList<>();
-        System.out.println("Список четных чисел по возрастанию из файла :");
+        System.out.println("Список четных чисел в порядке возрастания из файла:");
         while (scanner.hasNextInt()) {
             int x = scanner.nextInt();
             if (x % 2 == 0) {
-                arrayList.add(x);
-                System.out.println(x);
+                arrayList.add(x);// собрали массив из четных чисел
+
+                Collections.sort(arrayList); //сортировка методом Collections.sort arrayLis по возрастанию
+                System.out.println(arrayList);
             }
         }
     }
