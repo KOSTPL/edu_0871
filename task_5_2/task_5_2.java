@@ -1,11 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
-
 /*
 //1. Ввести имя файла с консоли.
 //2. Прочитать из него набор чисел.
@@ -26,43 +18,29 @@ import java.util.Scanner;
 //10
 //*/
 
-/////////////////////////// вариант считывания из файла  (не понял как из scanner вытащить то что он считал из  с экрана ( D:/file/1.txt)
-public class task_5_2 {
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+import java.util.ArrayList;
+
+public class Task_5_2 {
     public static void main(String[] args) throws IOException {
-
-        // напишите тут ваш код D:\file\1.txt
-
         System.out.println("Введите ссылку на файл (пример D:/file/1.txt)");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        List<String> list = new ArrayList<>();
-        String file = reader.readLine();
-        list.add(file);
-//        Scanner scanner = null;
-//        try {
-//            scanner = new Scanner(new FileInputStream(reader.readLine()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-        FileInputStream fin = new FileInputStream(file);
-        System.out.println("Список чисел из файла :");
-        int i = -1;
-        while ((i = fin.read()) != -1) {
-            System.out.print((char) i);
+        Scanner scanner = new Scanner(new FileInputStream(reader.readLine()));
+        ArrayList<Integer> list = new ArrayList<>();
+        while(scanner.hasNext()) {
+            int number = scanner.nextInt();
+            if ((number % 2) == 0) {
+                list.add(number);
+            }
         }
-        fin.close();
-        System.out.println();
-/// далее  буду разбираться пока получил список из файла 5 -2 10 и тд
-//        ArrayList<Integer> arrayList = new ArrayList<>();
-//        System.out.println("Список четных чисел в порядке возрастания из файла:");
-//        while (list.hasNextInt()) {
-//            int x = list.nextInt();
-//            if (x % 2 == 0) {
-//                list.add(x);// собрали массив из четных чисел
-
-//                Collections.sort(list); //сортировка методом Collections.sort arrayLis по возрастанию
-//                System.out.println(list);
-//            }
-//        }
+        Collections.sort(list);
+        for (int number : list) {
+            System.out.println(number);
+        }
     }
 }
+      
