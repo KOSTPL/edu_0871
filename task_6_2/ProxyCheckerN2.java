@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.*;
 import java.util.Arrays;
-//////////////////////////////////////////Ошибки выдает программа - видимо не понимаю суть 2 способа, отсюда и ошибки
+
 public class ProxyCheckerN2 {
     public static void main(String[] args) throws Exception {
         FileReader reader = new FileReader("D://java/test.txt");
